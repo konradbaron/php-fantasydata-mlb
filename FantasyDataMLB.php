@@ -167,6 +167,21 @@ class FantasyDataMLB {
 	}
 	
 	
+	
+	/**
+	* Projected Player Game Stats by Date
+ 	* http://api.nfldata.apiphany.com/mlb/v2/{format}/PlayerGameProjectionStatsByDate/{date}?subscription-key=<Your subscription key>
+	* Required parameters
+	* format | date
+ 	*/
+	public function projected_player_game_stats_by_date($request_date,$format = 'json'){
+		$request_date = $this->check_date($request_date);
+		
+		$this->send_url = $this->base_url.$format.'/PlayerGameProjectionStatsByDate/'.$request_date.'?subscription-key='.$this->api_key;
+		return $this->curl($this->send_url);
+	}
+	
+	
 	/**
 	* Stadiums
  	* http://api.nfldata.apiphany.com/mlb/v2/{format}/Stadiums?subscription-key=<Your subscription key>
