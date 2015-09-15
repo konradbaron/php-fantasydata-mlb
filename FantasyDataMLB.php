@@ -4,7 +4,7 @@
  */
 class FantasyDataMLB {
 	
-	private $base_url = "http://api.nfldata.apiphany.com/mlb/v2/";
+	private $base_url = "http://api.fantasydata.net/mlb/v2/";
 	private $send_url;
 	private $api_key;
 	private $format_valid = array('json','xml');
